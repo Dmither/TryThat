@@ -1,0 +1,295 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.wrapper {
+  padding: 40px;
+}
+
+.content {
+  background-color: rgb(46, 64, 82);
+  padding: 5%;
+}
+
+.content__circle {
+  padding: 5%;
+  width: 0%;
+  background-color: #fff;
+  border-radius: 0%;
+  position: relative;
+  left: 0;
+  -webkit-animation: circle-move 3s ease-in-out infinite alternate, circle-color-change 3s linear infinite alternate, circle-shape-change 3s linear infinite alternate;
+          animation: circle-move 3s ease-in-out infinite alternate, circle-color-change 3s linear infinite alternate, circle-shape-change 3s linear infinite alternate;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.content:hover {
+  background-color: #222;
+}
+.content:hover .content__circle {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+@-webkit-keyframes circle-move {
+  0% {
+    left: 0%;
+  }
+  9% {
+    left: 0%;
+  }
+  20% {
+    left: -2%;
+  }
+  80% {
+    left: 92%;
+  }
+  91% {
+    left: 90%;
+  }
+  100% {
+    left: 90%;
+  }
+}
+
+@keyframes circle-move {
+  0% {
+    left: 0%;
+  }
+  9% {
+    left: 0%;
+  }
+  20% {
+    left: -2%;
+  }
+  80% {
+    left: 92%;
+  }
+  91% {
+    left: 90%;
+  }
+  100% {
+    left: 90%;
+  }
+}
+@-webkit-keyframes circle-shape-change {
+  0% {
+    border-radius: 50%;
+  }
+  50% {
+    border-radius: 50%;
+  }
+  75% {
+    border-radius: 0%;
+  }
+  100% {
+    border-radius: 0%;
+  }
+}
+@keyframes circle-shape-change {
+  0% {
+    border-radius: 50%;
+  }
+  50% {
+    border-radius: 50%;
+  }
+  75% {
+    border-radius: 0%;
+  }
+  100% {
+    border-radius: 0%;
+  }
+}
+@-webkit-keyframes circle-color-change {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #fff;
+  }
+  100% {
+    background-color: red;
+  }
+}
+@keyframes circle-color-change {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #fff;
+  }
+  100% {
+    background-color: red;
+  }
+}
+.button-block {
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  top: 0;
+  padding: 20px 60px;
+  background-color: rgb(172, 20, 20);
+  border-radius: 10px;
+  -webkit-box-shadow: 0 10px 0 rgb(102, 12, 12);
+          box-shadow: 0 10px 0 rgb(102, 12, 12);
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 40px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+.btn:hover {
+  background-color: rgb(216, 18, 18);
+  -webkit-box-shadow: 0 10px 0 rgb(172, 20, 20);
+          box-shadow: 0 10px 0 rgb(172, 20, 20);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn:active {
+  top: 5px;
+  -webkit-box-shadow: 0 5px 0 rgb(172, 20, 20);
+          box-shadow: 0 5px 0 rgb(172, 20, 20);
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.image-block {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+.image-block > img {
+  width: 100%;
+}
+
+.image-fields {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+}
+
+.field {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+  left: 0px;
+  top: 0px;
+}
+
+.field:hover {
+  background-color: rgba(19, 179, 125, 0.3);
+}
+
+.field:nth-child(1) {
+  width: 49%;
+  height: 33%;
+  left: 1%;
+  top: 10%;
+}
+
+.field:nth-child(2) {
+  width: 49%;
+  height: 33%;
+  left: 50%;
+  top: 10%;
+}
+
+.field:nth-child(3) {
+  width: 49%;
+  height: 33%;
+  left: 1%;
+  top: 43%;
+}
+
+.field:nth-child(4) {
+  width: 49%;
+  height: 33%;
+  left: 50%;
+  top: 43%;
+}
